@@ -41,6 +41,10 @@ jQuery(document).ready(function() {
 		
 		if (mq.matches) {
 			jQuery("#mainmenu").show();
+		}
+		
+		if (mq.matches) {
+			jQuery("#mainmenu-2").show();
 		}		
 		
 		
@@ -49,6 +53,13 @@ jQuery(document).ready(function() {
 				jQuery('#mainmenu').show();
 				}else if(mb==0){
 				jQuery('#mainmenu').hide();	
+			}
+		}
+		if (mx.matches) {
+			if(mb==1){
+				jQuery('#mainmenu-2').show();
+				}else if(mb==0){
+				jQuery('#mainmenu-2').hide();	
 			}
 		}
 	};	
@@ -267,6 +278,15 @@ jQuery(document).ready(function() {
 		mb = 0;	
 	})
 
+	jQuery('#menu-btn').toggle(function () {
+    	jQuery('#mainmenu-2').show();
+		mb = 1;
+	},function(){
+		jQuery('#mainmenu-2').hide();	
+		mb = 0;	
+	})
+
+
 
 // one page navigation
 	
@@ -332,11 +352,35 @@ jQuery(document).ready(function() {
 				}
 			});
 		});
+		jQuery(document).scroll(function() {
+			jQuery('#mainmenu-2 li a').each(function(){
+				if (this.href.indexOf('#') != -1) {
+				var href = jQuery(this).attr('href');
+					if(jQuery(window).scrollTop() > jQuery(href).offset().top - 140){
+						jQuery(this).parent().parent().find('a').removeClass('active');
+						jQuery(this).addClass('active');
+					}
+				}
+			});
+		});
 	
 	// --------------------------------------------------
 	// scroll navigation
 	// --------------------------------------------------
 	jQuery('#mainmenu a[href^="#"]').on('click', function (e) {
+                e.preventDefault();
+
+                var target = this.hash,
+                    $target = jQuery(target);
+
+                jQuery('html, body').stop().animate({
+                    'scrollTop': $target.offset().top - 70 // - 200px (nav-height)
+                }, 800, 'easeInOutExpo', function () {
+                    window.location.hash = '1' + target;
+                });
+			});
+			
+			jQuery('#mainmenu-2 a[href^="#"]').on('click', function (e) {
                 e.preventDefault();
 
                 var target = this.hash,

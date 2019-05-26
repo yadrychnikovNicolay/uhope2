@@ -263,6 +263,14 @@ padding-bottom: 18px;
 }
 header.clone #mainmenu li li a { padding: 2px 15px 2px 15px;}
 header.clone #mainmenu li li li a { padding: 2px 15px 2px 15px;}
+
+
+header.clone #mainmenu-2 a{
+	padding-top: 17px ;
+	padding-bottom: 18px;
+	}
+	header.clone #mainmenu-2 li li a { padding: 2px 15px 2px 15px;}
+	header.clone #mainmenu-2 li li li a { padding: 2px 15px 2px 15px;}
 body.down header.clone {
 top:0;
 left:0;
@@ -399,12 +407,27 @@ text-transform:uppercase;
 font-weight:700;
 }
 
+#mainmenu-2 {
+font-family: "Raleway",Arial, Helvetica, sans-serif;
+letter-spacing: 0px;
+float: right;
+height: 30px;
+font-size:10px;
+text-transform:uppercase;
+font-weight:700;
+}
 #mainmenu ul {
 float: right;
 margin: 0px 0px;
 padding: 0px 0px;
 height: 30px;
 }
+#mainmenu-2 ul {
+	float: right;
+	margin: 0px 0px;
+	padding: 0px 0px;
+	height: 30px;
+	}
 #mainmenu li {
 margin: 0px 0px;
 padding: 0px 0px;
@@ -413,6 +436,14 @@ display: inline;
 list-style: none;
 position: relative;
 }
+#mainmenu-2 li {
+	margin: 0px 0px;
+	padding: 0px 0px;
+	float: left;
+	display: inline;
+	list-style: none;
+	position: relative;
+	}
 #mainmenu a {
 display: block;
 padding: 32px 20px 33px 20px;
@@ -422,7 +453,20 @@ color: #fff;
 text-align:center;
 outline:none;
 }
+#mainmenu-2 a {
+display: block;
+padding: 0 10px;
+line-height: 35px;
+text-decoration: none;
+color: #aaa;
+text-align:center;
+outline:none;
+}
 #mainmenu a:hover {
+background: #1a8b49;
+color:#fff;
+}
+#mainmenu-2 a:hover {
 background: #1a8b49;
 color:#fff;
 }
@@ -431,7 +475,15 @@ font-size: 12px;
 font-weight: normal;
 border-bottom: solid 1px #333;
 }
+#mainmenu-2 li li {
+font-size: 12px;
+font-weight: normal;
+border-bottom: solid 1px #333;
+}
 #mainmenu li li:last-child {
+border-bottom: none;
+}
+#mainmenu-2 li li:last-child {
 border-bottom: none;
 }
 #mainmenu li li a {
@@ -484,6 +536,58 @@ background: #ff4200;
 color: #fff;
 }
 #mainmenu select option {
+padding: 10px;
+}
+#mainmenu-2 li li a {
+padding: 2px 15px 2px 15px;
+background: #222327;
+border-top: none;
+color: #ccc;
+width:170px;
+border-left:none;
+text-align:left;
+}
+#mainmenu-2 li li li a {
+padding: 2px 15px 2px 15px;
+background: #222327;
+}
+#mainmenu-2 li li a:hover {
+color: #fff;
+background: #1a8b49;
+}
+#mainmenu-2 li ul {
+width: 172px;
+height: auto;
+position: absolute;
+top: 100%;
+left: 0px;
+z-index: 10;
+display: none;
+border:solid 1px #2b2b2b;
+}
+#mainmenu-2 li li {
+display: block;
+float: none;
+}
+#mainmenu-2 li:hover > ul {
+display: block;
+}
+#mainmenu-2 li ul ul {
+left: 100%;
+top: 0px;
+}
+#mainmenu-2 li:hover > ul {
+color: #1a8b49;
+}
+#mainmenu-2 select {
+padding: 10px;
+height: 36px;
+font-size: 14px;
+border: none;
+background: #ff4200;
+color: #fff;
+}
+#mainmenu-2 select option {
 padding: 10px;
 }
 .selectnav {
@@ -724,7 +828,6 @@ background: #fff;
 width: auto;
 }
 .post-content {
-	width: 800px;
 	margin: auto;
 }
 .post-meta {
@@ -744,11 +847,10 @@ margin-right: 25px;
 float: none;
 }
 .post-image img {
-width:100%;
-height: 600px;
-margin-bottom: 20px;
-object-fit: contain;
+	width:100%;
+	margin-bottom: 20px;
 }
+
 .dark .post-meta{
 border-top: solid 1px #2b2b2b;
 border-bottom: solid 1px #2b2b2b;
@@ -2032,6 +2134,82 @@ padding: 20px;
 	border-bottom:none;
 }
 #mainmenu li a{
+	color:#fff;
+}
+
+
+
+
+
+#mainmenu-2{
+	display:none;
+	float:none;
+	z-index:200;
+	width:100%;
+	margin:0;
+	padding:0;
+}
+
+#mainmenu-2 a{
+	text-align:left;
+	padding-top:10px !important;
+	padding-bottom:10px !important;
+}
+
+#mainmenu-2 a:hover{
+	background:#111 !important;
+}
+
+
+#mainmenu-2 li ul{
+	display:block;
+	position:inherit;
+	margin:0;
+	width:100%;
+}
+
+#mainmenu-2 li{
+	border-bottom:solid 1px #333;
+	margin:0;
+	width:100%;
+	display:block;
+	letter-spacing:3px;
+}
+
+#mainmenu-2 li:last-child{
+	margin-bottom:30px;
+}
+
+#mainmenu-2 li ul{
+	border-top:solid 1px #333;
+}
+
+#mainmenu-2 li ul a{
+	width:100%;
+	background:none;
+	border:none;
+}
+
+#mainmenu-2 li ul li{
+	border:none;
+	padding-left: 40px !important;
+}
+
+#mainmenu-2 li ul li a{
+	display:block;
+	border-left:solid 1px #333;
+	border-bottom:solid 1px #333;
+}
+
+#mainmenu-2 li ul li:last-child{
+	border-bottom:none;
+	margin:0;
+}
+
+#mainmenu-2 li ul li:last-child a{
+	border-bottom:none;
+}
+#mainmenu-2 li a{
 	color:#fff;
 }
 }
